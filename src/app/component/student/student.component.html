@@ -1,0 +1,12 @@
+<p class="mx-auto text-info">Students</p>
+<table class="table" *ngIf="isShowAllStudents">
+  <th>Name</th>
+  <th>Sure name</th>
+  <th>Group</th>
+  <tr class="d-lg-table-row" *ngFor="let student_ of students">
+    <td>{{student_.firstname}}</td>
+    <td>{{student_.lastname}}</td>
+    <td>{{studentGroups(student_).group != null ? student_  .group.name : 'NO'}}</td>
+  </tr>
+</table>
+

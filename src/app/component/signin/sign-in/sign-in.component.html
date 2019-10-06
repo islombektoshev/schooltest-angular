@@ -1,0 +1,10 @@
+<div class="m-auto w-25">
+  <label for="username-id" class="form-control">Username</label>
+  <input  id="username-id" class="form-control" type="text" [(ngModel)]="username"><br>
+  <label for="password-id" class="form-control" >Password</label>
+  <input type="password" id="password-id" class="form-control"  [(ngModel)]="password">
+  <br>
+  <button class="form-control btn btn-primary"  (click)="onSignInButtonClick()">Sign In</button>
+  <br>
+  <h6>{{message}}</h6>
+</div>

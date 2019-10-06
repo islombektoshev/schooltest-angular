@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row flex-row  ">
+    <ul class="col-3">
+      <h6>Your Centers</h6>
+      <li *ngFor="let c of centerModels" class="card m-2 p-1" (click)="onCenterClick(c.name)">
+        <p class="text-primary">{{c.name}}</p>
+        <p class="text-secondary">{{c.caption}}</p>
+      </li>
+    </ul>
+    <div class="col-9">
+      <div class="card h-25  m-2 p-2" *ngIf="center != null">
+        <div class="text-primary">{{center.name}}</div>
+        <span class="text-secondary">{{center.caption}}</span>
+      </div>
+      <div *ngIf="isCenterSelected">
+        <div class="btn btn-dark" (click)="onStudentLinkClicked()">Students</div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
